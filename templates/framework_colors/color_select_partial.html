@@ -1,0 +1,10 @@
+<label for="color">Pick A color</label>
+<select name="color" id="colorSelect">
+  {% for color in custom_colors %}
+  <option value="{{ custom_color.bg_css_class }}">{{ custom_color.name }}</option>
+  {% endfor %}
+  <option value="spacer" disabled>----</option>
+  {% for color, color_detail in default_colors.items %}
+  <option value="{{ color_detail.value.bg_css_class }}">{{ color_detail.value.name }}</option>
+  {% endfor %}
+</select>
